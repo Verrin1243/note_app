@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:flutter/material.dart';
 import 'package:note_app/components/noteCard.dart';
-import 'package:note_app/notepad/noteForm.dart';
+import 'package:note_app/notepad/note_form.dart';
 import 'package:note_app/user_note.dart';
 import 'package:note_app/userSettingsKeys.dart';
 
@@ -85,7 +85,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: goNewNote,
-        tooltip: 'Increment ${_userNotes.notes.length}',
         child: const Icon(Icons.add),
       ),
     );

@@ -25,7 +25,7 @@ class _TextInputState extends State<TextInput> {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(4))
           ),
-        hint: Text('hello'),
+        hint: Text('title'),
       ),
     );
   }

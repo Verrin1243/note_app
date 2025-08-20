@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/notepad/textFormInput.dart';
-import 'package:note_app/notepad/textInput.dart';
+import 'package:note_app/notepad/text_form_input.dart';
+import 'package:note_app/notepad/text_input.dart';
 import 'package:note_app/user_note.dart';
 import 'package:note_app/userSettingsKeys.dart';
 import 'package:note_app/user_notes.dart';
@@ -83,7 +83,10 @@ class NoteFormState extends State<NoteForm> {
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text('New note'),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: saveNotes),
+      floatingActionButton: FloatingActionButton(
+        onPressed: saveNotes,
+        child: const Icon(Icons.save),
+        ),
       body: Center(
         child: Padding(
           padding: EdgeInsets.all(8),
@@ -95,7 +98,10 @@ class NoteFormState extends State<NoteForm> {
               TextFormInput(notesController),
               SizedBox(height: 8,),
               if (widget.guid != null)
-                TextButton(onPressed: deleteNote, child: Text('Delete now'))
+                TextButton(
+                  onPressed: deleteNote, 
+                  child: const Icon(Icons.delete),
+                  )
             ],
           ),
         ),
