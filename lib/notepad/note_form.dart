@@ -60,7 +60,6 @@ class NoteFormState extends State<NoteForm> {
     
     userNotesList = UserNotes.fromJson(jsonDecode(settingString));
     int noteIndex = userNotesList.notes.indexWhere((userNote) =>  userNote.guid == widget.guid);
-    print(noteIndex);
 
     // Note exists
     if (noteIndex > -1) {

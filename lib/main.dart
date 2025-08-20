@@ -5,7 +5,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:note_app/components/note_card.dart';
 import 'package:note_app/notepad/note_form.dart';
-import 'package:note_app/user_note.dart';
 import 'package:note_app/userSettingsKeys.dart';
 
 void main() {
@@ -21,11 +20,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Note app',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Note overview'),
     );
   }
 }
