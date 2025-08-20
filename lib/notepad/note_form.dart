@@ -86,12 +86,12 @@ class NoteFormState extends State<NoteForm> {
         onPressed: saveNotes,
         child: const Icon(Icons.save),
         ),
-      body: Center(
+      body: Align(
+       alignment: Alignment.topCenter,
        child: SizedBox(
          child: Padding(
           padding: EdgeInsets.all(8),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextInput(titleController),
               SizedBox(height: 8),
