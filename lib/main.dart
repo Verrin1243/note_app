@@ -3,7 +3,7 @@ import 'package:note_app/user_notes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:flutter/material.dart';
-import 'package:note_app/components/noteCard.dart';
+import 'package:note_app/components/note_card.dart';
 import 'package:note_app/notepad/note_form.dart';
 import 'package:note_app/user_note.dart';
 import 'package:note_app/userSettingsKeys.dart';

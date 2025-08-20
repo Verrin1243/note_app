@@ -12,7 +12,7 @@ class NoteForm extends StatefulWidget {
   final String? note;
   final String? guid;
 
-  const NoteForm({this.noteName = '', this.note = '', this.guid = '', super.key});
+  const NoteForm({this.noteName = '', this.note = '', this.guid, super.key});
 
   @override
   State<NoteForm> createState() => NoteFormState();
@@ -97,11 +97,13 @@ class NoteFormState extends State<NoteForm> {
               SizedBox(height: 8),
               TextFormInput(notesController),
               SizedBox(height: 8,),
-              if (widget.guid != null)
+              if (widget.guid != null) ...[
                 TextButton(
                   onPressed: deleteNote, 
                   child: const Icon(Icons.delete),
-                  )
+                )
+              ]
+
             ],
           ),
         ),
