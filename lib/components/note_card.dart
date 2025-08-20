@@ -28,7 +28,7 @@ class NoteCard extends StatelessWidget {
           onCardClick(context)
         },
         child: Card(
-          color: Color.fromARGB(255, 143, 58, 192),
+          color: Color.fromARGB(255, 156, 198, 253),
           child: Padding(
             padding: EdgeInsets.all(16),
             child: Column(
@@ -39,7 +39,7 @@ class NoteCard extends StatelessWidget {
                     name,
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
+                      color: Color.fromARGB(255, 46, 46, 46),
                       fontSize: 16,
                       fontWeight: FontWeight.bold
                     )
@@ -53,7 +53,7 @@ class NoteCard extends StatelessWidget {
                       notes, 
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
+                        color: Color.fromARGB(255, 46, 46, 46),
                       )
                     ),
                   )

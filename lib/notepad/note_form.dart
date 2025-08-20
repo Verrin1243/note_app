@@ -80,8 +80,8 @@ class NoteFormState extends State<NoteForm> {
  Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: Text('New note'),
+        backgroundColor: Color.fromARGB(255, 112, 234, 255),
+        title: Text('Note'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: saveNotes,

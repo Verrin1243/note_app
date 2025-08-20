@@ -70,12 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Color.fromARGB(255, 112, 179, 255),
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Align(
+        alignment: Alignment.topCenter,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: 
             List.generate(_userNotes.notes.length, (index){
               return NoteCard(_userNotes.notes[index].name, _userNotes.notes[index].note as String, _userNotes.notes[index].guid as String, _getUserNotes);
