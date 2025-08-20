@@ -88,25 +88,32 @@ class NoteFormState extends State<NoteForm> {
         child: const Icon(Icons.save),
         ),
       body: Center(
-        child: Padding(
+       child: SizedBox(
+         child: Padding(
           padding: EdgeInsets.all(8),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextInput(titleController),
               SizedBox(height: 8),
-              TextFormInput(notesController),
+              SizedBox(
+                height: 200,
+                child: TextFormInput(notesController),
+              ),
               SizedBox(height: 8,),
               if (widget.guid != null) ...[
                 TextButton(
                   onPressed: deleteNote, 
-                  child: const Icon(Icons.delete),
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll<Color>(Color.fromARGB(255, 202, 37, 25)),
+                  ),
+                  child: Icon(Icons.delete, color: Color.fromARGB(255, 255, 255, 255), ),
                 )
               ]
-
             ],
           ),
         ),
+       )
       )
     );
   }
