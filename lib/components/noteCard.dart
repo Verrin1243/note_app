@@ -10,28 +10,59 @@ class NoteCard extends StatelessWidget {
 
   const NoteCard(this.name, this.notes, this.guid, this.callback, {super.key});
 
+  void onCardClick(context) {
+    Navigator.push(context, MaterialPageRoute(
+      builder: (context) => NoteForm(noteName: name, note: notes, guid: guid,),
+        )).then((_) {
+        callback();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => NoteForm(noteName: name, note: notes, guid: guid,),)).then((_) {
-          this.callback();
-        })
-      },
-      child: Card(
-        color: Color.fromARGB(0, 109, 65, 231),
-        child: Padding(
-          padding: EdgeInsets.all(16),
-          child: Column(
-            children: [
-              Text(name),
-              SizedBox(
-                child: Text(notes),
-              )
-            ],
-          )
-          ),
-      ),
-    );
+    return LayoutBuilder(builder: (context, constraints) {
+      return SizedBox(
+        width: 250,
+        child:  InkWell(
+        onTap: () => {
+          onCardClick(context)
+        },
+        child: Card(
+          color: Color.fromARGB(255, 143, 58, 192),
+          child: Padding(
+            padding: EdgeInsets.all(16),
+            child: Column(
+              children: [
+                Align(
+                  alignment: AlignmentGeometry.topLeft,
+                  child: Text(
+                    name,
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold
+                    )
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: SizedBox(
+                    height: 60,
+                    child: Text(
+                      notes, 
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                      )
+                    ),
+                  )
+                )
+              ],
+            )
+            ),
+        ),
+      ));
+    });
   }
 }
